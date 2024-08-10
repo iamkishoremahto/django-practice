@@ -43,7 +43,7 @@ def updateStudent(request,pk):
         return redirect('home')
         
     student = models.Student.objects.get(pk=pk)
-    return render(request, 'pages/updateStudent.html', {"student":student})
+    return render(request, 'pages/updateStudent.html', {"student":student,"username": request.user.username})
 
 @checkLogin   
 def deleteStudent(request,pk):
