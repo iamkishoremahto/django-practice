@@ -1,0 +1,19 @@
+<nav class="bg-dark">
+    <div class=" container d-flex justify-content-between align-items-center mb-3 ">
+        <h1 class="text-light">CRUD MINI PROJECT</h1>
+        <div>
+            <div class="d-flex align-items-center justify-content-between gap-2 ">
+                <div>
+                    <p class=" text-light">{% if username %} {{ username }} {% endif %} </p>
+                </div>
+                {% if username %}
+                <div>
+                    <a href="{% url 'logout' %}" class="btn text-light btn-danger">Logout</a>
+                </div>
+                {% endif %}
+            </div>
+            
+        </div>
+        
+    </div>
+</nav>

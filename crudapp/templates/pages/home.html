@@ -1,0 +1,17 @@
+{% extends "layout/layout.html" %}
+
+{% block body %}
+
+<div class="container">
+    <div class="addStudent row ">
+        <div class = "col-3">
+            {% include "components/addStudent.html" %} 
+        </div>
+        <div class = "col">
+            {% include "components/showStudentsTable.html" with students=students %}
+        </div>
+    </div>
+   
+</div>
+
+{% endblock %}

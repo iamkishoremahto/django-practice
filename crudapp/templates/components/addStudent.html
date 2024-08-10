@@ -1,0 +1,30 @@
+<div>
+    <h3 class="bg-dark text-light p-3 fs-4 fw-bold">Insert Student Details</h3>
+</div>
+<div class="bg-body-secondary p-3 rounded">
+    <form action="{% url 'addStudent' %}" method = "post" class="d-flex flex-column gap-2">{% csrf_token %}
+
+        <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="age" class="form-label fw-bold">Age</label>
+            <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+        </div>
+
+        <select class="form-select" name="gender" >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        <button type="submit" class="btn btn-primary">Add</button>
+
+    </form>
+
+</div>
